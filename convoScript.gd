@@ -52,7 +52,6 @@ func load_text(script):
 	else: await load_line(script["character"] + ": ", Color(0.8, 1, 0.8), font, 30)
 	for line in script["lines"]:
 		await load_line(line, Color(0.6, 0.2, 0.8), font, 20)
-	loading_text = false
 	if(!skip): await get_tree().create_timer(text_speed * 10).timeout
 	else:
 		skip = false
@@ -60,6 +59,7 @@ func load_text(script):
 		while(!skip):
 			await get_tree().process_frame
 	skip = false
+	loading_text = false
 
 var choice
 func ask(options):
