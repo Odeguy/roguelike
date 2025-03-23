@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://c001w7rqeuwa"]
+
+[ext_resource type="FontFile" uid="uid://0qnxiso811fu" path="res://Fonts/Amnesty-SansStamp.ttf" id="1_h0qvq"]
+
+[sub_resource type="Theme" id="Theme_ttqgw"]
+default_font = ExtResource("1_h0qvq")
+default_font_size = 125
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="start_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 375.0
+offset_right = 452.0
+offset_bottom = 522.0
+text = "Start"
+
+[node name="settings_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 673.0
+offset_top = 373.0
+offset_right = 975.0
+offset_bottom = 520.0
+text = "Settings"
+
+[node name="exit_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 913.0
+offset_top = 535.0
+offset_right = 1079.0
+offset_bottom = 619.0
+text = "Exit"
+
+[node name="Title" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 97.0
+offset_right = 814.0
+offset_bottom = 224.0
+theme = SubResource("Theme_ttqgw")
+theme_override_colors/default_color = Color(0.8, 1, 0.8, 1)
+theme_override_colors/font_outline_color = Color(0.364706, 0.145098, 0.501961, 1)
+theme_override_constants/outline_size = 15
+bbcode_enabled = true
+text = "Game"
+
+[connection signal="pressed" from="start_button" to="." method="_on_start_button_pressed"]

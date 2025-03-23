@@ -1,0 +1,18 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1742556222
+convo.tscn::PackedScene::3887449434024930154::1742526100::0::1::::<><>::res://convoScript.gd
+convoScript.gd::GDScript::-1::1742526050::0::1::::<>Control<>::
+export_presets.cfg::TextFile::-1::1742525307::0::1::::<><>::
+game.tscn::PackedScene::5807115256818466614::1742526050::0::1::::<><>::res://gameScript.gd<>uid://bvndyvgsp75ni::::res://convo.tscn<>uid://c001w7rqeuwa::::res://main_menu.tscn
+gameScript.gd::GDScript::-1::1742526050::0::1::::<>Node2D<>::
+main_menu.tscn::PackedScene::193552692329657212::1742526050::0::1::::<><>::uid://0qnxiso811fu::::res://Fonts/Amnesty-SansStamp.ttf
+::res://Conversations/::1742524227
+conv1.json::JSON::-1::1742524227::0::1::::<><>::
+::res://Fonts/::1742416712
+Amnesty-SansStamp.ttf::FontFile::1788581977856070470::1742416707::1742416707::1::::<><>::
+::res://Images/::1742419548
+::res://Sprites/::1742499251
+Eltnum(Awakened).png::CompressedTexture2D::2766836002219190507::1742438484::1742499251::1::::<><>::
+Eltnum.png::CompressedTexture2D::2009964324242029645::1742420959::1742420974::1::::<><>::
+Evil Eltnum.png::CompressedTexture2D::8332568905483126813::1742438157::1742438176::1::::<><>::
+Hyde.png::CompressedTexture2D::4786876367248468198::1742438021::1742438027::1::::<><>::

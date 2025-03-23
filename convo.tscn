@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvndyvgsp75ni"]
+
+[ext_resource type="Script" path="res://convoScript.gd" id="1_qedum"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f0n7t"]
+bg_color = Color(0.0509804, 0.0705882, 0.101961, 1)
+border_width_left = 3
+border_width_top = 5
+border_width_right = 3
+border_width_bottom = 3
+
+[node name="Convo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qedum")
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+z_index = -1
+layout_mode = 0
+offset_top = 353.0
+offset_right = 1141.0
+offset_bottom = 653.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_f0n7t")
+
+[node name="TextBox" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 362.0
+offset_right = 1110.0
+offset_bottom = 607.0
+bbcode_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -2

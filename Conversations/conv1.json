@@ -1,0 +1,53 @@
+{
+	"parts": [
+		{
+			"character": "Eltnum",
+			"lines": [
+				"Skibidi toilet...",
+				"...すきびぢ　トイレイ？",
+				"What the hell does that mean???"
+			]
+		},
+		{
+			"character": "Evil Eltnum",
+			"lines": [
+				"Shut the fuck up you nasty bitch."
+			]
+		},
+		{
+			"character": "Eltnum",
+			"lines": [
+				"What in the...",
+				"Is this even a real game???",
+				"I'm good enough for AA, at least!"
+			]
+		},
+		{
+			"character": "Evil Eltnum",
+			"lines": [
+				"Give it up!",
+				"You didn't even get a spot in your own series...",
+				"...and you've become a mainstay in a discount version.",
+				"There's nothing left for you!",
+				"You should kill yourself, NOW!!!"
+			]
+		},
+		{
+			"character": "Eltnum(Awakened)",
+			"lines": [
+				"Why so many PNGs?",
+				"Can't you use spritesheets?"
+			]
+		},
+		{
+			"character": "Hyde",
+			"lines": [
+				"I'm here too."
+			],
+			"choice": [
+				"Pack it up dawg.",
+				"Okay, cool."
+			] 
+		}
+	]
+}
