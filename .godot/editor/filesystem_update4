@@ -1,6 +1,5 @@
 res://convo.tscn
-res://Conversations/conv2.json
-res://gameScript.gd
+res://convoScript.gd
 res://game.tscn
 res://main_menu.tscn
-res://convoScript.gd
+res://card.tscn
