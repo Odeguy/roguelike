@@ -1,5 +1,8 @@
-res://convo.tscn
-res://convoScript.gd
+res://plot.txt
 res://game.tscn
+res://gameScript.gd
 res://main_menu.tscn
+res://convo.tscn
 res://card.tscn
+res://battle.tscn
+res://battleScript.gd
