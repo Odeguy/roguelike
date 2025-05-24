@@ -1,0 +1,32 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1748056354
+battle.tscn::PackedScene::6041093763929826590::1748056196::0::1::::<><><>0<>0<><>::uid://d1qjsxhjvwggu::::res://battle_script.gd
+battle_script.gd::GDScript::9017781846246825816::1743710834::0::1::::<>Node2D<><>0<>0<><>::
+cards.json::JSON::-1::1748056301::0::1::::<><><>0<>0<><>::
+convo.tscn::PackedScene/PackedScene::3887449434024930154::1748056053::0::1::::<><><>0<>0<><>::uid://c4pk3ym3rerc2::::res://convoScript.gd
+convoScript.gd::GDScript/GDScript::6839941951750182611::1742755641::0::1::::<>Control<><>0<>0<><>::
+export_presets.cfg::TextFile/TextFile::-1::1742525307::0::1::::<><><>0<>0<><>::
+game.tscn::PackedScene/PackedScene::5807115256818466614::1748056184::0::1::::<><><>0<>0<><>::uid://i0u8ypwepe58::::res://gameScript.gd<>uid://bvndyvgsp75ni::::res://convo.tscn<>uid://c001w7rqeuwa::::res://main_menu.tscn<>uid://cscl6xavvesyw::::res://battle.tscn
+game_script.gd::GDScript::614394748747933925::1743710722::0::1::::<>Node2D<><>0<>0<><>::
+main_menu.tscn::PackedScene/PackedScene::193552692329657212::1748056053::0::1::::<><><>0<>0<><>::uid://0qnxiso811fu::::res://Fonts/Amnesty-SansStamp.ttf
+plot.txt::TextFile/TextFile::-1::1743710420::0::1::::<><><>0<>0<><>::
+card.tscn::PackedScene::1906291708651613245::1748056301::0::1::::<><><>0<>0<><>::
+card_script.gd::GDScript::584742411576095671::1748056323::0::1::::<>Node2D<><>0<>0<><>::
+::res://cardarts/::1748056354
+default.png::CompressedTexture2D::3063150079035637686::1747267753::1748056358::1::::<><><>0<>0<>d78e5d745767bf93afe3643297148b48<>res://.godot/imported/default.png-eb40b9f982c89f979396e7fef792e8a2.ctex::
+IMG_2119.JPG::CompressedTexture2D::293684174645200674::1747269982::1748056358::1::::<><><>0<>0<>a31c197143726ad52ca1830a0fb5d56d<>res://.godot/imported/IMG_2119.JPG-e1c70cbf32d91e241ba872f8c9e2a230.ctex::
+Screenshot (89).png::CompressedTexture2D::1447503027167209671::1747269976::1748056358::1::::<><><>0<>0<>dee576305b8ecb8ca283a604c7b85c1b<>res://.godot/imported/Screenshot (89).png-03ee7b9d7cce7ee0a3c291481bb99098.ctex::
+::res://cardflares/::1747265106
+::res://cardframes/::1748056354
+default.png::CompressedTexture2D::5275077678392367060::1747268961::1748056358::1::::<><><>0<>0<>9dba225b604905141db48807eeb7435b<>res://.godot/imported/default.png-285e8ce5ab14beabb74ceeefaea27f8d.ctex::
+::res://Conversations/::1742556353
+conv1.json::JSON/JSON::-1::1742524227::0::1::::<><><>0<>0<><>::
+conv2.json::JSON/JSON::-1::1742556353::0::1::::<><><>0<>0<><>::
+::res://Fonts/::1747179484
+Amnesty-SansStamp.ttf::FontFile/FontFile::1788581977856070470::1742416707::1747179484::1::::<><><>0<>0<>f57cd89914927f45ae90a6dad7714c2d<>res://.godot/imported/Amnesty-SansStamp.ttf-96cff9843a826d31ea48ea69339859b0.fontdata::
+::res://Images/::1742419548
+::res://Sprites/::1747179484
+Eltnum(Awakened).png::CompressedTexture2D/CompressedTexture2D::2766836002219190507::1742438484::1747179484::1::::<><><>0<>0<>9ff307b95c3fc3e462d498901208ad82<>res://.godot/imported/Eltnum(Awakened).png-b01ab4ea621732ab3864587ac2449677.ctex::
+Eltnum.png::CompressedTexture2D/CompressedTexture2D::2009964324242029645::1742420959::1747179484::1::::<><><>0<>0<>19edfe3863703c5c3e3a6961023a44d6<>res://.godot/imported/Eltnum.png-5bc3f0906a0c169e77054794c4c8a14b.ctex::
+Evil Eltnum.png::CompressedTexture2D/CompressedTexture2D::8332568905483126813::1742438157::1747179484::1::::<><><>0<>0<>61eb973bed5ca1dc9586f2f0039c0a4b<>res://.godot/imported/Evil Eltnum.png-0f0f0a573c385d6dd41fd2f8f1a34994.ctex::
+Hyde.png::CompressedTexture2D/CompressedTexture2D::4786876367248468198::1742438021::1747179484::1::::<><><>0<>0<>bfa9b841ded3dd0916561359b03b7445<>res://.godot/imported/Hyde.png-43524d0f151c225029cd543d4a9dbfe3.ctex::

@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://bovhxyo1qdewj"]
+
+[ext_resource type="Script" uid="uid://cpacv3hesqk0p" path="res://card_script.gd" id="1_kikvd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjlel"]
+size = Vector2(120, 166)
+
+[sub_resource type="Gradient" id="Gradient_kikvd"]
+offsets = PackedFloat32Array(0, 0.545455, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0.254902, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rjlel"]
+gradient = SubResource("Gradient_kikvd")
+fill_to = Vector2(0, 1)
+
+[node name="Card" type="Node2D"]
+scale = Vector2(0.85, 0.85)
+script = ExtResource("1_kikvd")
+
+[node name="Body" type="StaticBody2D" parent="."]
+
+[node name="Shape" type="CollisionShape2D" parent="Body"]
+visible = false
+shape = SubResource("RectangleShape2D_rjlel")
+
+[node name="Back" type="Sprite2D" parent="Body"]
+visible = false
+position = Vector2(1.5, -0.500004)
+scale = Vector2(1.92188, 2.64063)
+texture = SubResource("GradientTexture2D_rjlel")
+
+[node name="Front" type="Sprite2D" parent="Body"]
+position = Vector2(1.5, -0.500004)
+scale = Vector2(1.92188, 2.64063)
+texture = SubResource("GradientTexture2D_rjlel")
+
+[node name="NameLabel" type="RichTextLabel" parent="Body/Front"]
+offset_left = -30.0
+offset_top = -31.0
+offset_right = 29.0
+offset_bottom = -21.0
+fit_content = true
+scroll_active = false
+
+[node name="EffectLabel" type="RichTextLabel" parent="Body/Front"]
+offset_left = -30.0
+offset_top = 2.0
+offset_right = 29.0
+offset_bottom = 27.0
+scroll_active = false
+
+[node name="Button" type="Button" parent="Body"]
+visible = false
+offset_left = -59.0
+offset_top = -85.0
+offset_right = 62.0
+offset_bottom = 84.0

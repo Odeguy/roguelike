@@ -6,6 +6,7 @@ extends Node2D
 var save_state = 1
 var start_menu
 var text_box
+var battle
 func _ready():
 	start_menu = main_scene.instantiate()
 	start_menu.get_node("start_button").pressed.connect(_on_start_button_pressed)
@@ -39,7 +40,9 @@ func _on_settings_button_pressed():
 	pass
 	
 func _on_free_battle_button_pressed():
-	pass
+	start_menu.hide()
+	battle = battle_scene.instantiate()
+	add_child(battle)
 	
 func _on_exit_button_pressed():
 	get_tree().quit()

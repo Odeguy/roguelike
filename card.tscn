@@ -1,8 +1,93 @@
-[gd_scene load_steps=2 format=3 uid="uid://d32b2ruvk8jww"]
+[gd_scene load_steps=5 format=3 uid="uid://2fol05ndfdbx"]
 
-[ext_resource type="Script" path="res://cardScript.gd" id="1_7ikca"]
+[ext_resource type="Script" uid="uid://cpacv3hesqk0p" path="res://card_script.gd" id="1_kikvd"]
+[ext_resource type="Texture2D" uid="uid://bjv2vthlxmkio" path="res://cardarts/default.png" id="2_q5obu"]
+[ext_resource type="Texture2D" uid="uid://chfj02as4b4u7" path="res://cardframes/default.png" id="3_e484p"]
 
-[node name="card" type="Node2D"]
-script = ExtResource("1_7ikca")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kikvd"]
+resource_local_to_scene = true
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.548366, 0.906853, 0.441576, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Card" type="Node2D"]
+scale = Vector2(0.85, 0.85)
+script = ExtResource("1_kikvd")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.4706
+offset_top = -75.2941
+offset_right = 469.529
+offset_bottom = 687.706
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+theme_override_styles/panel = SubResource("StyleBoxFlat_kikvd")
+
+[node name="Body" type="AspectRatioContainer" parent="PanelContainer"]
+z_index = 2
+layout_mode = 2
+
+[node name="Frame" type="TextureRect" parent="PanelContainer/Body"]
+z_index = 1
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("3_e484p")
+
+[node name="Art" type="TextureRect" parent="PanelContainer/Body"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_q5obu")
+
+[node name="NameLabel" type="RichTextLabel" parent="."]
+z_index = 1
+offset_left = -47.0
+offset_top = -75.0
+offset_right = 1176.0
+offset_bottom = 199.0
+scale = Vector2(0.1, 0.1)
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 50
+text = "fhftgdhfghdfghdfghfghfg"
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+
+[node name="PointsLabel" type="RichTextLabel" parent="."]
+z_index = 1
+offset_left = -47.0
+offset_top = -47.0
+offset_right = 1271.0
+offset_bottom = 423.0
+scale = Vector2(0.1, 0.1)
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 100
+text = "8"
+horizontal_alignment = 1
+
+[node name="EffectLabel" type="RichTextLabel" parent="."]
+z_index = 1
+offset_left = -47.0588
+offset_right = 1458.94
+offset_bottom = 754.0
+scale = Vector2(0.1, 0.0983267)
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 50
+text = "ksbfiuysdgyfuiwegfisguigfiodoshoidhfoasdhfolsdnfkasdlbf
+dsfasdgfsdgdfgfdfghsgfgsdfgsdfgdfgsdfgsdsdgdsfgksbfiuysdgyfuiwegfisguigfiodoshoidhfoasdhfolsdnfkasdlbf
+dsfasdgfsdgdfgfdsgfgsdfgsdfgdfgsdfgsdsdgdsfgksbfiuysdgyfuiwegfisguigfiodoshoidhfoasdhfolsdnfkasdl"
+autowrap_mode = 2
+
+[connection signal="mouse_entered" from="PanelContainer" to="." method="_on_panel_container_mouse_entered"]
+[connection signal="mouse_exited" from="PanelContainer" to="." method="_on_panel_container_mouse_exited"]

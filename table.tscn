@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnum65sgtxsy3"]
+
+[ext_resource type="Script" uid="uid://gu1esdvudsjc" path="res://table_script.gd" id="1_nxs2u"]
+[ext_resource type="PackedScene" uid="uid://2fol05ndfdbx" path="res://card.tscn" id="2_v5i0k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nxs2u"]
+size = Vector2(1165.5, 389)
+
+[node name="Deck" type="Node2D"]
+script = ExtResource("1_nxs2u")
+card_scene = ExtResource("2_v5i0k")
+
+[node name="Area" type="StaticBody2D" parent="."]
+position = Vector2(582, 440)
+
+[node name="Shape" type="CollisionShape2D" parent="Area"]
+position = Vector2(0.75, 9.5)
+shape = SubResource("RectangleShape2D_nxs2u")
+
+[node name="Points" type="RichTextLabel" parent="Area"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="end_turn_button" type="Button" parent="Area"]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "DEPLOY"

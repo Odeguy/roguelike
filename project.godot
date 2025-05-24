@@ -10,14 +10,19 @@ config_version=5
 
 [application]
 
-config/name="Project 3"
-run/main_scene="res://game.tscn"
-config/features=PackedStringArray("4.2", "Forward Plus")
+config/name="Card Game"
+run/main_scene="uid://co0als4pkvkqg"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [input]
 
 test={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":84,"key_label":0,"unicode":116,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":84,"key_label":0,"unicode":116,"location":0,"echo":false,"script":null)
 ]
 }

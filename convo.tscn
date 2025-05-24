@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bvndyvgsp75ni"]
 
-[ext_resource type="Script" path="res://convoScript.gd" id="1_qedum"]
+[ext_resource type="Script" uid="uid://c4pk3ym3rerc2" path="res://convoScript.gd" id="1_qedum"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f0n7t"]
 bg_color = Color(0.0509804, 0.0705882, 0.101961, 1)

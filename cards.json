@@ -1,0 +1,109 @@
+{
+	"cards": [
+		{
+			"name": "Hollow Mask",
+			"effect": "Block your opponent from viewing your hand or deck until your next turn",
+			"points": 1
+		},
+		{
+			"name": "Pyrrhic Victory",
+			"effect": "Divide your opponents points by [points value], and reduce your own points to zero",
+			"points": 2
+		},
+		{
+			"name": "Monument to Pain",
+			"effect": "Draw one card everytime your points are reduced during this turn",
+			"points": 1
+		},
+		{
+			"name": "Onyx Blade",
+			"effect": "Gain [points value] points. This card's point value cannot be changed",
+			"points": 10
+		},
+		{
+			"name": "Restoring Flame",
+			"effect": "Restore your point value to it's peak this turn",
+			"points": 1
+		},
+		{
+			"name": "Reckless Gamble",
+			"effect": "40% chance to double a cards point value. Upon failure, the card is destroyed instead",
+			"points": 1
+		},
+		{
+			"name": "Divination",
+			"effect": "Reveal your opponent's entire hand. No other action can be taken within the same turn, before or after this card is activated",
+			"points": 1
+		},
+		{
+			"name": "Vision Sharing",
+			"effect": "View one card in your opponent's hand",
+			"points": 1
+		},
+		{
+			"name": "Induction",
+			"effect": "Reveal the result of a chance occurence",
+			"points": 1
+		},
+		{
+			"name": "Deduction",
+			"effect": "Reveal the top card of your opponent's deck",
+			"points": 1
+		},
+		{
+			"name": "Free Will",
+			"effect": "End a chain of card effects",
+			"points": 1
+		},
+		{
+			"name": "Calamity",
+			"effect": "The next 5 chance occurences have a halved probability",
+			"points": 1
+		},
+		{
+			"name": "Luck Streak",
+			"effect": "The next 5 chance occurences have a doubled probability",
+			"points": 1
+		},
+		{
+			"name": "Motivational Poster",
+			"effect": "Add [points value] to another card's point value",
+			"points": 3
+		},
+		{
+			"name": "Sharp Outfit",
+			"effect": "View the top [points value] cards in your deck and add 1 to your hand",
+			"points": 3
+		},
+		{
+			"name": "Cognitive Dissonance",
+			"effect": "This card uses the most recently activated effect",
+			"points": 1
+		},
+		{
+			"name": "Outrage",
+			"effect": "Gain [points value] points, Opponent loses [points value] points",
+			"points": 8
+		},
+		{
+			"name": "Heart Attack",
+			"effect": "Opponent loses [points value] points",
+			"points": 13
+		},
+		{
+			"name": "Barrage",
+			"effect": "Gain an amount from 0 to [points value] points",
+			"points": 17
+		},
+		{
+			"name": "High Potential",
+			"effect": "Divide opponent's points by [points value] if [points value] > 0",
+			"points": -5
+		},
+		{
+			"name": "Surging Flame",
+			"effect": "Multiply points by [points value]",
+			"points": 3
+		}
+	]
+}
