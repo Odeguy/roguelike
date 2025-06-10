@@ -20,6 +20,7 @@ var altered_probability_turns: int = 0
 var last_effect: String
 var card_queue: Array = []
 var deploy: bool
+var plays_per_turn := 4
 
 #initializes a new game
 func _ready():
@@ -73,7 +74,7 @@ func create_random_card() -> Object:
 func play():
 	new_turn()
 	turn_count += 1
-	for i in range(4): #3 plays, 0 - 2
+	for i in range(1, plays_per_turn + 1):
 		if turn:
 			if turn_count > 2: player.draw_card()
 			if await make_play_or_deploy(): break
@@ -98,7 +99,7 @@ func play():
 			opponent.show_hand()
 			await add_to_card_queue(card, points, opponent, player)
 			await get_tree().create_timer(0.5).timeout
-			if i == 2: await deploy_queue() #final iteration
+			if i == plays_per_turn: await deploy_queue() #final iteration
 	if player.points == points_goal or opponent.points == points_goal:
 		gameover = true
 	if player.hand.size() == 0 and player.deck.size() == 0 or opponent.hand.size() == 0 and opponent.hand.size() == 0:
@@ -117,7 +118,8 @@ func make_play_or_deploy() -> bool: #returns true if deploying
 	deploy = false
 	var prompt
 	player.get_end_turn_button().pressed.connect(_on_deploy_pressed.bind())
-	if card_queue.size() == 3:
+	print(card_queue.size())
+	if card_queue.size() == plays_per_turn - 1:
 		prompt = text_prompt("Deploy")
 		while !deploy:
 			await get_tree().process_frame

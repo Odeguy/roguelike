@@ -3,7 +3,7 @@ extends Node2D
 var card_name: String
 var effect: String
 var front: bool = false
-var _color: Color
+var color: Color
 var font_color: Color
 var font: Variant
 var font_size: int
@@ -12,6 +12,7 @@ var loaded: bool
 var points: int
 var text_scale = 0.1
 var mouse_entered = false
+var extension_side: String = "right"
 
 func _ready():
 	$NameLabel.set_scale(Vector2(text_scale, text_scale))
@@ -79,8 +80,8 @@ func get_effect() -> String:
 func get_font_color() -> Color:
 	return font_color
 	
-func get__color() -> Color:
-	return _color
+func get_color() -> Color:
+	return color
 	
 func get_font() -> String:
 	return font
@@ -109,10 +110,11 @@ func load_text(gradually: bool):
 			if loaded: break
 			$EffectLabel.append_text(char)
 			await get_tree().create_timer(text_time / effect.length()).timeout
+		if !loaded: $PointsLabel.append_text(str(points))
 	else:
 		$NameLabel.append_text(card_name)
 		$EffectLabel.append_text(effect_with_int)
-	$PointsLabel.append_text(str(points))
+		$PointsLabel.append_text(str(points))
 	loaded = true
 
 func extend_margin(length: int, expansion: int, text_position: int, duration: int) -> void:
@@ -127,14 +129,18 @@ func extend_margin(length: int, expansion: int, text_position: int, duration: in
 		stylebox = stylebox.duplicate()
 		$PanelContainer.add_theme_stylebox_override("panel", stylebox)
 		
-	tween.tween_property(stylebox, "expand_margin_left", length, duration)
 	tween.set_parallel()
-	tween.tween_property(stylebox, "expand_margin_right", expansion, duration)
+	if extension_side == "right":
+		tween.tween_property(stylebox, "expand_margin_left", length, duration)
+		tween.tween_property(stylebox, "expand_margin_right", expansion, duration)
+	elif extension_side == "left":
+		tween.tween_property(stylebox, "expand_margin_right", length, duration)
+		tween.tween_property(stylebox, "expand_margin_left", expansion, duration)
 	tween.tween_property(stylebox, "expand_margin_bottom", expansion, duration)
 	tween.tween_property(stylebox, "expand_margin_top", expansion, duration)
-	tween.tween_property($NameLabel, "position:x", text_position, duration)
-	tween.tween_property($PointsLabel, "position:x", text_position, duration)
-	tween.tween_property($EffectLabel, "position:x", text_position, duration)
+	tween.tween_property($NameLabel, "position:x", text_position , duration)
+	tween.tween_property($PointsLabel, "position:x", text_position , duration)
+	tween.tween_property($EffectLabel, "position:x", text_position , duration)
 
 @onready var z_default: int = z_index
 @onready var unextended_length: int = $PanelContainer.size.x
@@ -142,7 +148,9 @@ func extend_margin(length: int, expansion: int, text_position: int, duration: in
 @onready var text_first_position: Vector2 = $NameLabel.position
 func _on_panel_container_mouse_entered():
 	mouse_entered = true
-	extend_margin(unextended_length * 1.5, 50, text_first_position.x - unextended_length * 1.5 * $PanelContainer.scale.x, 1)
+	var d: float = 1
+	if extension_side == "left": d = -0.65
+	extend_margin(unextended_length * 1.5, 50, text_first_position.x - d * unextended_length * 1.5 * $PanelContainer.scale.x, 1)
 	load_text(true)
 	
 func _on_panel_container_mouse_exited():

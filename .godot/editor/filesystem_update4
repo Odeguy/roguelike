@@ -1,12 +1,10 @@
-res://convo.tscn
 res://game.tscn
+res://baclground_shader.gdshader
+res://battle_script.gd
+res://convo.tscn
 res://main_menu.tscn
 res://battle.tscn
 res://card.tscn
-res://cards.json
 res://table.tscn
-res://battle_script.gd
-res://card_script.gd
-res://table_script.gd
-res://baclground_shader.gdshader
-res://game_script.gd
+res://Tables/delusional_table.tscn
+res://points_resource.gd

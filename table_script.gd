@@ -51,14 +51,14 @@ func show_hand():
 		if(!side_switched):
 			card.position.x = start + increment * increments + card.get_size().x / 2
 			card.position.y = area_size.y * 5 / 3
+			card.switch_side("front")
 		else:
 			card.position.x = screen_size.x - (start + increment * increments + card.get_size().x / 2)
 			card.position.y = screen_size.y - area_size.y * 5 / 3
-		card.rotation = $Area.rotation
+			card.switch_side("back")
+			card.extension_side = "left"
 		card.z_index = increments * 7
 		increments += 1
-		if side_switched: card.switch_side("back")
-		else: card.switch_side("front")
 		card.show()
 
 func refresh_points():
@@ -126,6 +126,9 @@ func clear_points_history():
 func switch_side():
 	side_switched = true
 	$Area.rotate(3.14)
+	$Area/Points.rotation = 3.14
+	$Area/Points.position.x += 20
+	$Area/end_turn_button.hide()
 	$Area.position = Vector2($Area.position.x, ($Area/Shape.shape.size.y * 0.5))
 	
 #card effect functions

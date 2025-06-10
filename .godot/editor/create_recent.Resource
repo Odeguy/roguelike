@@ -1,0 +1,2 @@
+points_resource
+Resource
